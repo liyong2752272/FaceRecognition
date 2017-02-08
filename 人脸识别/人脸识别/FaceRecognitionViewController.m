@@ -8,7 +8,6 @@
 
 #import "FaceRecognitionViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "MZLoadingCircle.h"
 #import "LY_AudioPalyTool.h"
 @import CoreText;
 
@@ -62,7 +61,6 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 @property (nonatomic, assign) NSTimeInterval feedbackIntervalWhileWaitingForShutter;
 @property (nonatomic, assign) NSTimeInterval minimumWinkDurationForAutomaticOPenEyes;
 
-@property (nonatomic,strong) MZLoadingCircle *loadingCircle;
 @property (nonatomic,strong) LY_AudioPalyTool *audioPalyTool;
 @end
 
@@ -629,37 +627,6 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
     _tipsLab.text = tipsname;
 }
 
-#pragma mark - 加载动画
--(void)showLoadingMode {
-    if (!_loadingCircle) {
-        _loadingCircle = [[MZLoadingCircle alloc]initWithNibName:nil bundle:nil];
-        _loadingCircle.view.backgroundColor = [UIColor clearColor];
-        
-        //Colors for layers
-        _loadingCircle.colorCustomLayer = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1];
-        _loadingCircle.colorCustomLayer2 = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:0.65];
-        _loadingCircle.colorCustomLayer3 = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:0.4];
-        
-        int size = 200;
-        
-        CGRect frame = _loadingCircle.view.frame;
-        frame.size.width = size ;
-        frame.size.height = size;
-        frame.origin.x = self.view.frame.size.width / 2 - frame.size.width / 2;
-        frame.origin.y = self.view.frame.size.height / 2 - frame.size.height / 2;
-        _loadingCircle.view.frame = frame;
-        _loadingCircle.view.layer.zPosition = MAXFLOAT;
-        [self.view addSubview: _loadingCircle.view];
-    }
-}
-
-#pragma mark - 隐藏加载动画
--(void)hideLoadingMode {
-    if (_loadingCircle) {
-        [_loadingCircle.view removeFromSuperview];
-        _loadingCircle = nil;
-    }
-}
 
 #pragma mark - 拍照
 

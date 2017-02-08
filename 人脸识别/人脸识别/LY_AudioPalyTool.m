@@ -24,16 +24,6 @@ LYSingletonM
 {
     if (_lY_AudioPlayer == nil) {
         
-#if 0
-        // AVPlayerItem 表示播放源
-        // 这里的URL，可以是本地的URL，也可以是网络上的URL
-        NSString *urlStr = @"http://dp.local/4-Network&Data/Day5-多媒体/2-Resource/亡灵序曲.mp3";
-        // 有中文，需要进行URL编码
-        urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
-        AVPlayerItem *playerItem = [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:urlStr]];
-#endif
-        
         // 一开始播放的是LightNotice
         AVPlayerItem *firstItem = [self playFirstItemForResourceName:@"LightNotice"];
         

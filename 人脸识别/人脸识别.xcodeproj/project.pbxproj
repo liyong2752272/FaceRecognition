@@ -19,7 +19,6 @@
 		146DFBB61E4AEA8300A34518 /* verygood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146DFBB31E4AEA8300A34518 /* verygood.mp3 */; };
 		146DFBB71E4AEA8300A34518 /* zhayan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146DFBB41E4AEA8300A34518 /* zhayan.mp3 */; };
 		146DFBBA1E4AEB2700A34518 /* LY_AudioPalyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFBB91E4AEB2700A34518 /* LY_AudioPalyTool.m */; };
-		146DFBBF1E4AED0500A34518 /* MZLoadingCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFBBE1E4AED0500A34518 /* MZLoadingCircle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +62,6 @@
 		146DFBB91E4AEB2700A34518 /* LY_AudioPalyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY_AudioPalyTool.m; sourceTree = "<group>"; };
 		146DFBBB1E4AEB5F00A34518 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		146DFBBC1E4AEBAA00A34518 /* face.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = face.pch; sourceTree = "<group>"; };
-		146DFBBD1E4AED0500A34518 /* MZLoadingCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLoadingCircle.h; sourceTree = "<group>"; };
-		146DFBBE1E4AED0500A34518 /* MZLoadingCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLoadingCircle.m; sourceTree = "<group>"; };
 		146DFBC01E4AED4200A34518 /* LYSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSingleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +117,6 @@
 				146DFB7D1E4AE9AF00A34518 /* AppDelegate.h */,
 				146DFB7E1E4AE9AF00A34518 /* AppDelegate.m */,
 				146DFBC01E4AED4200A34518 /* LYSingleton.h */,
-				146DFBBD1E4AED0500A34518 /* MZLoadingCircle.h */,
-				146DFBBE1E4AED0500A34518 /* MZLoadingCircle.m */,
 				146DFBB81E4AEB2700A34518 /* LY_AudioPalyTool.h */,
 				146DFBB91E4AEB2700A34518 /* LY_AudioPalyTool.m */,
 				146DFBAD1E4AEA7A00A34518 /* FaceRecognitionViewController.h */,
@@ -305,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				146DFB7F1E4AE9AF00A34518 /* AppDelegate.m in Sources */,
-				146DFBBF1E4AED0500A34518 /* MZLoadingCircle.m in Sources */,
 				146DFBB01E4AEA7A00A34518 /* FaceRecognitionViewController.m in Sources */,
 				146DFB7C1E4AE9AF00A34518 /* main.m in Sources */,
 				146DFBBA1E4AEB2700A34518 /* LY_AudioPalyTool.m in Sources */,
@@ -538,6 +532,7 @@
 				146DFBA61E4AE9B000A34518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		146DFBA71E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别Tests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +541,7 @@
 				146DFBA91E4AE9B000A34518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		146DFBAA1E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别UITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +550,7 @@
 				146DFBAC1E4AE9B000A34518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
