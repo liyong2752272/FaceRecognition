@@ -1,0 +1,18 @@
+//
+//  face.pch
+//  人脸识别
+//
+//  Created by 白领神器 on 17/2/8.
+//  Copyright © 2017年 白领神器. All rights reserved.
+//
+
+#ifndef face_pch
+#define face_pch
+
+#ifdef __OBJC__ //所有objective-c文件共享的头文件
+#import "Global.h"
+
+#endif
+
+#endif /* face_pch */
+

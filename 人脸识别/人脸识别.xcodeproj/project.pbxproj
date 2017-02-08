@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146DFB7C1E4AE9AF00A34518 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFB7B1E4AE9AF00A34518 /* main.m */; };
+		146DFB7F1E4AE9AF00A34518 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFB7E1E4AE9AF00A34518 /* AppDelegate.m */; };
+		146DFB871E4AE9AF00A34518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146DFB861E4AE9AF00A34518 /* Assets.xcassets */; };
+		146DFB8A1E4AE9AF00A34518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146DFB881E4AE9AF00A34518 /* LaunchScreen.storyboard */; };
+		146DFB951E4AE9AF00A34518 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFB941E4AE9AF00A34518 /* ____Tests.m */; };
+		146DFBA01E4AE9AF00A34518 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFB9F1E4AE9AF00A34518 /* ____UITests.m */; };
+		146DFBB01E4AEA7A00A34518 /* FaceRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFBAE1E4AEA7A00A34518 /* FaceRecognitionViewController.m */; };
+		146DFBB11E4AEA7A00A34518 /* FaceRecognitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146DFBAF1E4AEA7A00A34518 /* FaceRecognitionViewController.xib */; };
+		146DFBB51E4AEA8300A34518 /* LightNotice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146DFBB21E4AEA8300A34518 /* LightNotice.mp3 */; };
+		146DFBB61E4AEA8300A34518 /* verygood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146DFBB31E4AEA8300A34518 /* verygood.mp3 */; };
+		146DFBB71E4AEA8300A34518 /* zhayan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 146DFBB41E4AEA8300A34518 /* zhayan.mp3 */; };
+		146DFBBA1E4AEB2700A34518 /* LY_AudioPalyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFBB91E4AEB2700A34518 /* LY_AudioPalyTool.m */; };
+		146DFBBF1E4AED0500A34518 /* MZLoadingCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 146DFBBE1E4AED0500A34518 /* MZLoadingCircle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		146DFB911E4AE9AF00A34518 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146DFB6F1E4AE9AF00A34518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146DFB761E4AE9AF00A34518;
+			remoteInfo = "人脸识别";
+		};
+		146DFB9C1E4AE9AF00A34518 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146DFB6F1E4AE9AF00A34518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146DFB761E4AE9AF00A34518;
+			remoteInfo = "人脸识别";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		146DFB771E4AE9AF00A34518 /* 人脸识别.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "人脸识别.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146DFB7B1E4AE9AF00A34518 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		146DFB7D1E4AE9AF00A34518 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		146DFB7E1E4AE9AF00A34518 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		146DFB861E4AE9AF00A34518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		146DFB891E4AE9AF00A34518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		146DFB8B1E4AE9AF00A34518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146DFB901E4AE9AF00A34518 /* 人脸识别Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "人脸识别Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146DFB941E4AE9AF00A34518 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		146DFB961E4AE9AF00A34518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146DFB9B1E4AE9AF00A34518 /* 人脸识别UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "人脸识别UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146DFB9F1E4AE9AF00A34518 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		146DFBA11E4AE9B000A34518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146DFBAD1E4AEA7A00A34518 /* FaceRecognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecognitionViewController.h; sourceTree = "<group>"; };
+		146DFBAE1E4AEA7A00A34518 /* FaceRecognitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceRecognitionViewController.m; sourceTree = "<group>"; };
+		146DFBAF1E4AEA7A00A34518 /* FaceRecognitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceRecognitionViewController.xib; sourceTree = "<group>"; };
+		146DFBB21E4AEA8300A34518 /* LightNotice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LightNotice.mp3; sourceTree = "<group>"; };
+		146DFBB31E4AEA8300A34518 /* verygood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = verygood.mp3; sourceTree = "<group>"; };
+		146DFBB41E4AEA8300A34518 /* zhayan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zhayan.mp3; sourceTree = "<group>"; };
+		146DFBB81E4AEB2700A34518 /* LY_AudioPalyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY_AudioPalyTool.h; sourceTree = "<group>"; };
+		146DFBB91E4AEB2700A34518 /* LY_AudioPalyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY_AudioPalyTool.m; sourceTree = "<group>"; };
+		146DFBBB1E4AEB5F00A34518 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		146DFBBC1E4AEBAA00A34518 /* face.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = face.pch; sourceTree = "<group>"; };
+		146DFBBD1E4AED0500A34518 /* MZLoadingCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLoadingCircle.h; sourceTree = "<group>"; };
+		146DFBBE1E4AED0500A34518 /* MZLoadingCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLoadingCircle.m; sourceTree = "<group>"; };
+		146DFBC01E4AED4200A34518 /* LYSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSingleton.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		146DFB741E4AE9AF00A34518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146DFB8D1E4AE9AF00A34518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146DFB981E4AE9AF00A34518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		146DFB6E1E4AE9AF00A34518 = {
+			isa = PBXGroup;
+			children = (
+				146DFB791E4AE9AF00A34518 /* 人脸识别 */,
+				146DFB931E4AE9AF00A34518 /* 人脸识别Tests */,
+				146DFB9E1E4AE9AF00A34518 /* 人脸识别UITests */,
+				146DFB781E4AE9AF00A34518 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		146DFB781E4AE9AF00A34518 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146DFB771E4AE9AF00A34518 /* 人脸识别.app */,
+				146DFB901E4AE9AF00A34518 /* 人脸识别Tests.xctest */,
+				146DFB9B1E4AE9AF00A34518 /* 人脸识别UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		146DFB791E4AE9AF00A34518 /* 人脸识别 */ = {
+			isa = PBXGroup;
+			children = (
+				146DFBBB1E4AEB5F00A34518 /* Global.h */,
+				146DFB7D1E4AE9AF00A34518 /* AppDelegate.h */,
+				146DFB7E1E4AE9AF00A34518 /* AppDelegate.m */,
+				146DFBC01E4AED4200A34518 /* LYSingleton.h */,
+				146DFBBD1E4AED0500A34518 /* MZLoadingCircle.h */,
+				146DFBBE1E4AED0500A34518 /* MZLoadingCircle.m */,
+				146DFBB81E4AEB2700A34518 /* LY_AudioPalyTool.h */,
+				146DFBB91E4AEB2700A34518 /* LY_AudioPalyTool.m */,
+				146DFBAD1E4AEA7A00A34518 /* FaceRecognitionViewController.h */,
+				146DFBAE1E4AEA7A00A34518 /* FaceRecognitionViewController.m */,
+				146DFBAF1E4AEA7A00A34518 /* FaceRecognitionViewController.xib */,
+				146DFB861E4AE9AF00A34518 /* Assets.xcassets */,
+				146DFB881E4AE9AF00A34518 /* LaunchScreen.storyboard */,
+				146DFB8B1E4AE9AF00A34518 /* Info.plist */,
+				146DFB7A1E4AE9AF00A34518 /* Supporting Files */,
+			);
+			path = "人脸识别";
+			sourceTree = "<group>";
+		};
+		146DFB7A1E4AE9AF00A34518 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				146DFBB21E4AEA8300A34518 /* LightNotice.mp3 */,
+				146DFBB31E4AEA8300A34518 /* verygood.mp3 */,
+				146DFBB41E4AEA8300A34518 /* zhayan.mp3 */,
+				146DFB7B1E4AE9AF00A34518 /* main.m */,
+				146DFBBC1E4AEBAA00A34518 /* face.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		146DFB931E4AE9AF00A34518 /* 人脸识别Tests */ = {
+			isa = PBXGroup;
+			children = (
+				146DFB941E4AE9AF00A34518 /* ____Tests.m */,
+				146DFB961E4AE9AF00A34518 /* Info.plist */,
+			);
+			path = "人脸识别Tests";
+			sourceTree = "<group>";
+		};
+		146DFB9E1E4AE9AF00A34518 /* 人脸识别UITests */ = {
+			isa = PBXGroup;
+			children = (
+				146DFB9F1E4AE9AF00A34518 /* ____UITests.m */,
+				146DFBA11E4AE9B000A34518 /* Info.plist */,
+			);
+			path = "人脸识别UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		146DFB761E4AE9AF00A34518 /* 人脸识别 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146DFBA41E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别" */;
+			buildPhases = (
+				146DFB731E4AE9AF00A34518 /* Sources */,
+				146DFB741E4AE9AF00A34518 /* Frameworks */,
+				146DFB751E4AE9AF00A34518 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "人脸识别";
+			productName = "人脸识别";
+			productReference = 146DFB771E4AE9AF00A34518 /* 人脸识别.app */;
+			productType = "com.apple.product-type.application";
+		};
+		146DFB8F1E4AE9AF00A34518 /* 人脸识别Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146DFBA71E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别Tests" */;
+			buildPhases = (
+				146DFB8C1E4AE9AF00A34518 /* Sources */,
+				146DFB8D1E4AE9AF00A34518 /* Frameworks */,
+				146DFB8E1E4AE9AF00A34518 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146DFB921E4AE9AF00A34518 /* PBXTargetDependency */,
+			);
+			name = "人脸识别Tests";
+			productName = "人脸识别Tests";
+			productReference = 146DFB901E4AE9AF00A34518 /* 人脸识别Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		146DFB9A1E4AE9AF00A34518 /* 人脸识别UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146DFBAA1E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别UITests" */;
+			buildPhases = (
+				146DFB971E4AE9AF00A34518 /* Sources */,
+				146DFB981E4AE9AF00A34518 /* Frameworks */,
+				146DFB991E4AE9AF00A34518 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146DFB9D1E4AE9AF00A34518 /* PBXTargetDependency */,
+			);
+			name = "人脸识别UITests";
+			productName = "人脸识别UITests";
+			productReference = 146DFB9B1E4AE9AF00A34518 /* 人脸识别UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		146DFB6F1E4AE9AF00A34518 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "白领神器";
+				TargetAttributes = {
+					146DFB761E4AE9AF00A34518 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J7DC8QVN8X;
+						ProvisioningStyle = Automatic;
+					};
+					146DFB8F1E4AE9AF00A34518 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 99WP3NK88U;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 146DFB761E4AE9AF00A34518;
+					};
+					146DFB9A1E4AE9AF00A34518 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 99WP3NK88U;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 146DFB761E4AE9AF00A34518;
+					};
+				};
+			};
+			buildConfigurationList = 146DFB721E4AE9AF00A34518 /* Build configuration list for PBXProject "人脸识别" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 146DFB6E1E4AE9AF00A34518;
+			productRefGroup = 146DFB781E4AE9AF00A34518 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				146DFB761E4AE9AF00A34518 /* 人脸识别 */,
+				146DFB8F1E4AE9AF00A34518 /* 人脸识别Tests */,
+				146DFB9A1E4AE9AF00A34518 /* 人脸识别UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		146DFB751E4AE9AF00A34518 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146DFB8A1E4AE9AF00A34518 /* LaunchScreen.storyboard in Resources */,
+				146DFBB11E4AEA7A00A34518 /* FaceRecognitionViewController.xib in Resources */,
+				146DFB871E4AE9AF00A34518 /* Assets.xcassets in Resources */,
+				146DFBB71E4AEA8300A34518 /* zhayan.mp3 in Resources */,
+				146DFBB61E4AEA8300A34518 /* verygood.mp3 in Resources */,
+				146DFBB51E4AEA8300A34518 /* LightNotice.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146DFB8E1E4AE9AF00A34518 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146DFB991E4AE9AF00A34518 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		146DFB731E4AE9AF00A34518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146DFB7F1E4AE9AF00A34518 /* AppDelegate.m in Sources */,
+				146DFBBF1E4AED0500A34518 /* MZLoadingCircle.m in Sources */,
+				146DFBB01E4AEA7A00A34518 /* FaceRecognitionViewController.m in Sources */,
+				146DFB7C1E4AE9AF00A34518 /* main.m in Sources */,
+				146DFBBA1E4AEB2700A34518 /* LY_AudioPalyTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146DFB8C1E4AE9AF00A34518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146DFB951E4AE9AF00A34518 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146DFB971E4AE9AF00A34518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146DFBA01E4AE9AF00A34518 /* ____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		146DFB921E4AE9AF00A34518 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146DFB761E4AE9AF00A34518 /* 人脸识别 */;
+			targetProxy = 146DFB911E4AE9AF00A34518 /* PBXContainerItemProxy */;
+		};
+		146DFB9D1E4AE9AF00A34518 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146DFB761E4AE9AF00A34518 /* 人脸识别 */;
+			targetProxy = 146DFB9C1E4AE9AF00A34518 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		146DFB881E4AE9AF00A34518 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146DFB891E4AE9AF00A34518 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		146DFBA21E4AE9B000A34518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		146DFBA31E4AE9B000A34518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		146DFBA51E4AE9B000A34518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J7DC8QVN8X;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/人脸识别/face.pch";
+				INFOPLIST_FILE = "人脸识别/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bailingshenqi.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		146DFBA61E4AE9B000A34518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J7DC8QVN8X;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/人脸识别/face.pch";
+				INFOPLIST_FILE = "人脸识别/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bailingshenqi.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		146DFBA81E4AE9B000A34518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 99WP3NK88U;
+				INFOPLIST_FILE = "人脸识别Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bailingshenqi.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/人脸识别.app/人脸识别";
+			};
+			name = Debug;
+		};
+		146DFBA91E4AE9B000A34518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 99WP3NK88U;
+				INFOPLIST_FILE = "人脸识别Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bailingshenqi.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/人脸识别.app/人脸识别";
+			};
+			name = Release;
+		};
+		146DFBAB1E4AE9B000A34518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 99WP3NK88U;
+				INFOPLIST_FILE = "人脸识别UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bailingshenqi.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "人脸识别";
+			};
+			name = Debug;
+		};
+		146DFBAC1E4AE9B000A34518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 99WP3NK88U;
+				INFOPLIST_FILE = "人脸识别UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bailingshenqi.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "人脸识别";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		146DFB721E4AE9AF00A34518 /* Build configuration list for PBXProject "人脸识别" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146DFBA21E4AE9B000A34518 /* Debug */,
+				146DFBA31E4AE9B000A34518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146DFBA41E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146DFBA51E4AE9B000A34518 /* Debug */,
+				146DFBA61E4AE9B000A34518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		146DFBA71E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146DFBA81E4AE9B000A34518 /* Debug */,
+				146DFBA91E4AE9B000A34518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		146DFBAA1E4AE9B000A34518 /* Build configuration list for PBXNativeTarget "人脸识别UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146DFBAB1E4AE9B000A34518 /* Debug */,
+				146DFBAC1E4AE9B000A34518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 146DFB6F1E4AE9AF00A34518 /* Project object */;
+}
