@@ -1,2 +1,2 @@
 # FaceRecognition
-...
+使用AVFoundation框架处理输入输出流，人脸的识别使用的是苹果自带的API
