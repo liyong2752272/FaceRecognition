@@ -24,13 +24,15 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 @property (strong) AVCaptureVideoDataOutput *frameOutput;
 @property (nonatomic, strong) AVCaptureStillImageOutput   * stillImageOutput;
 @property (strong,nonatomic) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;//相机拍摄预览图层
-
 @property (strong,nonatomic) AVCaptureStillImageOutput *captureStillImageOutput;//照片输出流
 
-@property (nonatomic,strong)UIImage *image;
-@property (nonatomic, assign) BOOL faceFound;
+@property (nonatomic,strong)UIImage *image;//获取到的每一帧图片
+
+@property (nonatomic,strong)UIImage *finalimage;
+
 @property (nonatomic, strong) CIContext *context;
 @property (nonatomic, strong) CIDetector *faceDetector;
+
 @property (weak, nonatomic) IBOutlet UIView *ViewContainer;
 
 @property (weak, nonatomic) IBOutlet UIView *maoPoint;
@@ -45,16 +47,14 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 
 @property (weak, nonatomic) IBOutlet UIImageView *finalImageV;
 
-@property (nonatomic,strong)UIImage *finalimage;
-
 @property (nonatomic, strong) NSDate *startedDetectingWinkDate;
 @property (nonatomic, strong) NSDate *endedDetectingWinkDate;
 
+@property (nonatomic, assign) BOOL isGreen;
+@property (nonatomic, assign) BOOL isEyeTakePhoto;
+@property (nonatomic, assign) BOOL isOpen;
+@property (nonatomic, assign) BOOL faceFound;
 
-@property (nonatomic,assign)BOOL isGreen;
-@property (nonatomic,strong)NSMutableArray *paixuArray;
-@property (nonatomic,assign)BOOL isEyeTakePhoto;
-@property (nonatomic,assign)BOOL isOpen;
 @property (nonatomic, strong) NSTimer *shutterTimer;
 @property (nonatomic, assign) NSTimeInterval cummulativeTimeInterval;
 @property (nonatomic, assign) NSTimeInterval pauseAfterWinkDetectionBeforeShutter;
@@ -70,6 +70,7 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
      self.isGreen = NO;
     
     _isEyeTakePhoto = YES;
@@ -90,24 +91,21 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
     // setup video input
     NSError *error = nil;
     self.videoInput = [AVCaptureDeviceInput deviceInputWithDevice:[self frontCamera] error:&error];
-    if ( [self.session canAddInput:self.videoInput] )
-    {
+    if ([self.session canAddInput:self.videoInput]){
        [self.session addInput:self.videoInput];
-        
     }
     
     // setup frame output
     self.frameOutput = [[AVCaptureVideoDataOutput alloc] init];
-    if ( [self.session canAddOutput:self.frameOutput] )
-    {
+    
+    if ([self.session canAddOutput:self.frameOutput]){
         [self.session addOutput:self.frameOutput];
-        
     }
     
     dispatch_queue_t queue = dispatch_queue_create("cameraQueue", DISPATCH_QUEUE_SERIAL);
     
 //   self.frameOutput.minFrameDuration = CMTimeMake(1, 25);
-//    self.videoDevice.activeVideoMinFrameDuration = CMTimeMake(1, 30);
+//   self.videoDevice.activeVideoMinFrameDuration = CMTimeMake(1, 30);
     [self.frameOutput setSampleBufferDelegate:self queue:queue];
     self.frameOutput.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:
                                       [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], kCVPixelBufferPixelFormatTypeKey,
@@ -304,24 +302,21 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
     if (_faceFound==YES) {
         
         [self performSelectorOnMainThread:@selector(displayImage) withObject:nil waitUntilDone:YES];
-        if ([self.UpStyle isEqualToString:@"1"]) {
-           
+        if (![self.UpStyle isEqualToString:@"1"]) {
+           [self performSelectorOnMainThread:@selector(playWithName:) withObject:@"zhayan" waitUntilDone:YES];
         }
-        else
-            [self performSelectorOnMainThread:@selector(playWithName:) withObject:@"zhayan" waitUntilDone:YES];
         
-    }else if (_faceFound==NO){
+    }else{
         
         [self performSelectorOnMainThread:@selector(displayImage2) withObject:nil waitUntilDone:YES];
-        if ([self.UpStyle isEqualToString:@"1"]) {
-            
-        }else
-        [self performSelectorOnMainThread:@selector(playWithName:) withObject:@"LightNotice" waitUntilDone:YES];
-        
+        if (![self.UpStyle isEqualToString:@"1"]){
+            [self performSelectorOnMainThread:@selector(playWithName:) withObject:@"LightNotice" waitUntilDone:YES];
+        }
+
     }
    
     if (![self.UpStyle isEqualToString:@"1"]) {
-        //
+        
         if (foundWink)
         {
     
@@ -419,14 +414,11 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 - (void)cameraWillShutterIn:(NSTimeInterval)time
 {
   
-    if ( time > 0 )
-    {
+    if ( time > 0 ){
         [self _animateRemainingTime:time animationDuration:JGFCameraDefaultFeedbackIntervalWhileWaitingForShutter];
-    }
-    else if(time <= 0)
-    {
+    }else
         [self _animateShutter];
-    }
+    
 }
 
 
@@ -489,7 +481,7 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 }
 
 
-
+#pragma mark - 图片处理
 //修改image的大小
 - (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
     // 创建一个bitmap的context
@@ -587,25 +579,6 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
 
 }
 
-#pragma mark - expendAbleAlartViewDelegate提示框代理
-- (void)negativeButtonAction
-{
-    NSLog(@"negative Action");
-    [self recoverySetting];
-}
-
-- (void)positiveButtonAction
-{
-    NSLog(@"positive Action");
-    [self goBack];
-}
-
-- (void)closeButtonAction
-{
-    NSLog(@"close Action");
-     [self recoverySetting];
-}
-
 -(void)displayImage{
     _spideImage.image= [UIImage imageNamed:@"photo-facebox-green"];
     self.isGreen = YES;
@@ -649,7 +622,6 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
             [self stop];
             
             _finalimage = [self getImageByCuttingImage:_image Rect:CGRectMake(0, 0,_image.size.width, _image.size.height-88)];
-            
             _finalImageV.hidden = NO;
             _finalImageV.image = _image;
             [self goUpdataWithImage:_finalimage];
@@ -657,7 +629,7 @@ NSTimeInterval JGFCameraDefaultMinimumWinkDurationForOpenEyes = 0.8f;
     }
 }
 
-- (void)aotutakePhoto
+- (void)aotuTakePhoto
 {
     
     [self performSelector:@selector(takePhotoClick:) withObject:nil afterDelay:0.5];
