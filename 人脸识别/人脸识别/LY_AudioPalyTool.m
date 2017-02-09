@@ -37,7 +37,6 @@ LYSingletonM
 // 根据下标来生成一个PlayerItem对象
 - (AVPlayerItem *)playFirstItemForResourceName:(NSString *)name
 {
-//    NSString *name = self.songList[index];
     NSURL *url = [[NSBundle mainBundle] URLForResource:name withExtension:@"mp3"];
     
     return [AVPlayerItem playerItemWithURL:url];
